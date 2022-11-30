@@ -18,3 +18,9 @@ return "Hello, World!"
 }
 return `Hello, ${input}!`;
 }
+const isFive = function(input) {
+return input == 5;
+}
+const isEven = function(input) {
+return input % 2 == 0;
+}

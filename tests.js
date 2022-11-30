@@ -13,6 +13,18 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+describe('isFive', function()  {
+    it('should be a defined function', function() {
+      expect(typeof isFive).toBe('function');
+    });
+    it("should never return 'undefined' when called", function() {
+       expect(isFive()).not.toBe(undefined);
+    });
+    it('should return true when input is 5', function() {
+       expect(isFive(5)).toBe(true);
+    });
+
+});
 describe('sayHello', function()  {
     it('should be a defined function', function() {
       expect(typeof sayHello).toBe('function');
@@ -48,3 +60,21 @@ describe('sayHello', function()  {
       expect(sayHello('')).toBe("Hello, !");
     });
 });
+describe('isEven', function()  {
+    it('should return true when input is even number', function() {
+    expect(isEven(2)).toBe(true);
+    expect(isEven(0)).toBe(true);
+    expect(isEven('22222222')).toBe(true);
+    });
+    it('should return false when input is not an even number', function() {
+    expect(isEven(3)).toBe(false);
+    expect(isEven(1)).toBe(false);
+    expect(isEven('22221')).toBe(false);
+    });
+});
+// template
+//describe('', function() {
+//it('', function() {
+//expect()).toBe();
+//});
+//});
