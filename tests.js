@@ -22,6 +22,7 @@ describe('isFive', function()  {
     });
     it('should return true when input is 5', function() {
        expect(isFive(5)).toBe(true);
+       expect(isFive("5")).toBe(true)
     });
 
 });
@@ -65,11 +66,18 @@ describe('isEven', function()  {
     expect(isEven(2)).toBe(true);
     expect(isEven(0)).toBe(true);
     expect(isEven('22222222')).toBe(true);
+     expect(isEven(-4)).toBe(true);
+      expect(isEven('8')).toBe(true);
+       expect(isEven(false)).toBe(true);
     });
     it('should return false when input is not an even number', function() {
     expect(isEven(3)).toBe(false);
     expect(isEven(1)).toBe(false);
     expect(isEven('22221')).toBe(false);
+     expect(isEven(true)).toBe(false);
+      expect(isEven(Infinity)).toBe(false);
+       expect(isEven()).toBe(false);
+       expect(isEven('banana')).toBe(false);
     });
 });
 // template
