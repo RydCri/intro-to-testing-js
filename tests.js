@@ -35,5 +35,16 @@ describe('sayHello', function()  {
     it('should return the string "Hello, Tom!" when executed', function() {
       expect(sayHello("Tom")).toBe("Hello, Tom!");
     });
-
+    it('should return the string "Hello, World!" when given the boolean true', function() {
+      expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, null!" when input is null', function() {
+      expect(sayHello(null)).toBe("Hello, null!");
+    });
+    it(`should return the string "Hello, null!" when input is "null"`, function() {
+      expect(sayHello('null')).toBe("Hello, null!");
+    });
+    it('should return the string "Hello, !" when input is empty string', function() {
+      expect(sayHello('')).toBe("Hello, !");
+    });
 });

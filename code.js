@@ -13,5 +13,8 @@ const helloWorld = function() {
 //}
 //}
 const sayHello = function(input) {
+if(input === true) {
+return "Hello, World!"
+}
 return `Hello, ${input}!`;
 }
